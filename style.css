@@ -1,0 +1,99 @@
+:root{
+  --right_screen_width: 264px;
+  --main_screen_border: 2px solid white;
+  --right_info_height: 360px;
+}
+
+.l_item {
+  height:90vh;
+  background: red;
+}
+
+.r_item {
+  background: red;
+  display: flex;
+  flex-flow: column;
+}
+
+.btn_area {
+  display: flex;
+  flex-flow: row;
+}
+
+.btn_item {
+  width: 52px;
+  height: 52px;
+  border: var(--main_screen_border);
+}
+
+.mini_map {
+  border: var(--main_screen_border);
+}
+
+.info_div {
+  border: var(--main_screen_border);
+}
+
+.container {
+  background: yellow;
+  height:100vh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hd_item {
+  background: #3C6395;
+  color: white;
+}
+
+.main_screen {
+  display: flex;
+}
+
+.left_screen {
+  float: left;
+  flex-grow: 1;
+  border: var(--main_screen_border);
+}
+
+.right_screen {
+  float: right;
+  width: var(--right_screen_width);
+  display: flex;
+  flex-flow: column;
+  border: var(--main_screen_border);
+}
+
+.header .hd_item.item1 {
+  width: 20%;
+}
+
+.header .hd_item.item2 {
+  width: 60%;
+  text-align : center;
+}
+
+.header .hd_item.item3 {
+  width: 20%;
+  text-align : right;
+}
+
+.left_screen .l_item.item4 {
+  text-align : right;
+}
+
+.right_screen .r_item.item5 {
+  flex: 1 1 auto;
+  text-align : right;
+  border: var(--main_screen_border);
+}
+
+.right_screen .r_item.item6 {
+  flex: 0 1 var(--right_info_height);
+  text-align : right;
+  border: var(--main_screen_border);
+}
