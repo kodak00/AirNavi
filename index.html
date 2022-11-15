@@ -7,6 +7,9 @@
   <title>Air Navigation</title>
   <script src="https://cesium.com/downloads/cesiumjs/releases/1.98/Build/Cesium/Cesium.js"></script>
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.98/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <!-- openlayers -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>  
 </head>
 <script src="main.js" defer></script>
 <body>
@@ -21,7 +24,7 @@
         <div id="cesiumContainer" class="l_item item4">4</div>
       </div>
       <div class="right_screen">
-        <div class="r_item item5">5
+        <div id="vMap" class="r_item item5">5
           <div class="btn_area">
               <a href="#" class="btn_item btn1">VPORT</a>
               <span class="btn_item btn2">FPLAN</span>
