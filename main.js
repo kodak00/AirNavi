@@ -32,7 +32,7 @@ function init(){
 			visible : true, //보여짐 여부
 			type : 'midnight', //지도 종류(일반) ---(야간(midnight), 위성(satellite) 등)
 			source : new ol.source.XYZ({ //vworld api 사용
-				url : 'http://api.vworld.kr/req/wmts/1.0.0/CEB52025-E065-364C-9DBA-44880E3B02B8/Base/{z}/{y}/{x}.png'
+				url : 'http://api.vworld.kr/req/wmts/1.0.0/CEB52025-E065-364C-9DBA-44880E3B02B8/midnight/{z}/{y}/{x}.png'
 			})
 	});
 
