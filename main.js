@@ -1,8 +1,11 @@
-const VportBtn = document.querySelector('.btn1');
+"use strict";
 
-VportBtn.addEventListener('click', () => {
+const psuBtn = document.querySelector('.btn_psu');
+
+psuBtn.addEventListener('click', () => {
   alert('click');
 });
+
 //git test
 // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
 const viewer = new Cesium.Viewer('cesiumContainer', {

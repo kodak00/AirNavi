@@ -10,7 +10,7 @@
 }
 
 .r_item {
-  background: red;
+  background: grey;
   display: flex;
   flex-flow: column;
 }
@@ -18,12 +18,70 @@
 .btn_area {
   display: flex;
   flex-flow: row;
+  justify-content: space-between;
 }
 
-.btn_item {
+li {
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+}
+
+ .btn_item {
   width: 52px;
   height: 52px;
-  border: var(--main_screen_border);
+  display: flex;
+  flex-flow: column;
+  min-inline-size: max-content;
+} 
+
+.menubar {
+  display: flex;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.btn_link {
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: x-small;
+}
+
+.btn_link > .btn {
+  display: block;
+  margin: 2px auto 4px auto;
+  line-height: 20px;
+  font-size: small;
+}
+
+img.btn {
+  width: 30px;
+}
+
+a:link { 
+  text-decoration: none; 
+  color: black;
+
+}
+
+
+a:visited { 
+  text-decoration: none; 
+  color: black;
+}
+
+
+a:hover { 
+  text-decoration: none;
+
+}
+
+a:active { 
+  text-decoration: underline; 
+  color: aqua;
 }
 
 .mini_map {
