@@ -4,6 +4,11 @@
   --right_info_height: 360px;
 }
 
+* {
+  color: white;
+  text-decoration: none; 
+}
+
 .l_item {
   height:90vh;
   background: red;
@@ -31,7 +36,8 @@ li {
   height: 52px;
   display: flex;
   flex-flow: column;
-  min-inline-size: max-content;
+  text-align: center;
+  font-size: x-small;
 } 
 
 .menubar {
@@ -42,46 +48,29 @@ li {
 
 }
 
-.btn_link {
-  text-align: center;
-  vertical-align: middle;
-  padding-top: 0;
-  padding-bottom: 0;
-  font-size: x-small;
-}
-
-.btn_link > .btn {
+.btn_item > .btn {
   display: block;
   margin: 2px auto 4px auto;
   line-height: 20px;
   font-size: small;
+
 }
 
 img.btn {
   width: 30px;
 }
 
-a:link { 
-  text-decoration: none; 
-  color: black;
-
-}
-
-
-a:visited { 
-  text-decoration: none; 
-  color: black;
-}
-
-
 a:hover { 
-  text-decoration: none;
-
+  color: aquamarine;
 }
 
-a:active { 
-  text-decoration: underline; 
-  color: aqua;
+
+/* 클릭 시 메뉴 버튼 활성화 */
+a:focus {
+  background-color: black;
+  color: aquamarine;
+  border: 1px solid aqua;
+  
 }
 
 .mini_map {
