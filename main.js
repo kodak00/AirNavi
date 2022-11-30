@@ -2,9 +2,14 @@
 
 const psuBtn = document.querySelector('.btn_psu');
 
-psuBtn.addEventListener('click', () => {
-  alert('click');
-});
+psuBtn.onclick = function() {
+	let psu = prompt("what is your contry?");
+	alert('ok'+psu+'good!');
+}
+// 클릭 시 알림메시지
+// psuBtn.addEventListener('click', () => {
+//   alert('click');
+// });
 
 //git test
 // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
