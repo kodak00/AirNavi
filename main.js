@@ -8,6 +8,7 @@ VportBtn.addEventListener('click', () => {
 const viewer = new Cesium.Viewer('cesiumContainer', {
   terrainProvider: Cesium.createWorldTerrain()
 });    
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkZTY2YjdiNC0zMDZlLTQ1MzEtYWNlMS1jY2MyYjA1M2VhMTIiLCJpZCI6MTExMjE3LCJpYXQiOjE2NzAwNjk2MTV9.IQ6BZ9tDnlW--Nn4oESBVyAnBfDMP8xZYheTqI0Uy9g';
 // Add Cesium OSM Buildings, a global 3D buildings layer.
 const buildingTileset = viewer.scene.primitives.add(Cesium.createOsmBuildings());   
 // Fly the camera to San Francisco at the given longitude, latitude, and height.
