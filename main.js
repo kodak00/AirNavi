@@ -53,6 +53,21 @@ var wms = new Cesium.WebMapTileServiceImageryProvider({
 				credit : new Cesium.Credit('VWorld Korea')
 });
 
+/*	//oskim 2022.12.13 postgresql + geoserver 자료 표시
+var detailedMaps = new Cesium.WebMapServiceImageryProvider({
+	url : 'http://192.168.158.111/geoserver/wms',
+	parameters: { 
+		format:'image/png', 
+		transparent:'true',
+		tiled: true,
+		enablePickFeatures: true
+	}, 
+	layers : 'airnav:SIG-wgs84',  // comma separated listing (nurc:Img_Sample, airnav:SIG-wgs84	- ok)
+	maximumLevel : 20
+});    
+viewer.imageryLayers.addImageryProvider(detailedMaps);
+//*/
+
 var viewer = new Cesium.Viewer("cesiumContainer",{
 	timeline : false,
 	animation : false,
@@ -71,11 +86,22 @@ var viewer = new Cesium.Viewer("cesiumContainer",{
 	})
 });
 
+///*	//oskim 2022.12.13 양재역 부근 건물 gltf 만들어 표시
+var position = Cesium.Cartesian3.fromDegrees(127.0367, 37.4835, 0);
+var headingPitchRoll = new Cesium.HeadingPitchRoll();
+var fixedFrameTransform = Cesium.Transforms.localFrameToFixedFrameGenerator('south', 'east');
+var model = viewer.scene.primitives.add(Cesium.Model.fromGltf({
+	url : 'assets/3d-building/yangae-building.gltf',
+	modelMatrix : Cesium.Transforms.headingPitchRollToFixedFrame(position, headingPitchRoll, Cesium.Ellipsoid.WGS84, fixedFrameTransform),
+	scale : 1})
+);
+//*/
+
 viewer.camera.flyTo({
-  destination : Cesium.Cartesian3.fromDegrees(127.03, 37.4522, 400),
+  destination : Cesium.Cartesian3.fromDegrees(127.034, 37.4351, 1500),
   orientation : {
     heading : Cesium.Math.toRadians(0.0),
-    pitch : Cesium.Math.toRadians(-15.0),
+    pitch : Cesium.Math.toRadians(-15.0),		//-15.0
   }
 });
 
