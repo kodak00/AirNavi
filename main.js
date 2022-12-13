@@ -53,7 +53,7 @@ var wms = new Cesium.WebMapTileServiceImageryProvider({
 				credit : new Cesium.Credit('VWorld Korea')
 });
 
-/*	//oskim 2022.12.13 postgresql + geoserver 자료 표시
+/*	//oskim 2022.12.13 postgresql + geoserver 자료 표시 (geoserver는 김언식 vmware에서 구동 중..)
 var detailedMaps = new Cesium.WebMapServiceImageryProvider({
 	url : 'http://192.168.158.111/geoserver/wms',
 	parameters: { 
